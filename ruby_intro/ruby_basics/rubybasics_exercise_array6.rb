@@ -1,0 +1,7 @@
+# Jesse Kercheval
+# May 18, 2022
+# RB100 Ruby Basics exercises
+
+numbers = [5, 9, 21, 26, 39]
+divisible_by_three = numbers.select { |n| n % 3 == 0 }
+p divisible_by_three

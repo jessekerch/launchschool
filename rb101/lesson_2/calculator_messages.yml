@@ -1,0 +1,13 @@
+welcome: "Welcome to Calculator! Enter your name:"
+valid_name: "Make sure to enter a valid name."
+operator_prompt: "\n
+    What operation would you like to perform?\n
+    1) add\n
+    2) subtract\n
+    3) multiply\n
+    4) divide\n
+\n"
+
+hello: "hello"
+
+

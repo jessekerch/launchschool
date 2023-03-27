@@ -1,0 +1,8 @@
+en:
+ welcome: 'Welcome to the mortage caclulator! Enter your name: '
+ loan: 'Please enter your loan amount: '
+ error: 'Sorry, please enter a number that is greater than 0'
+ apr: 'Please enter your Annual Percentage Rate (APR, with no % symbol): '
+ duration: 'Finally, enter the loan duration, in total months: '
+ again: 'Would you like to perform another calculation? (Y to calculate again)'
+ goodbye: 'Thank you for using mortgage calculator. Goodbye!'
