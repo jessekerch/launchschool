@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Forms Practice, LS202.5.7</title>
+    <meta charset="utf-8">
+    <style>
+/*      * {
+          border: 1px dotted black;
+        }*/
+    </style>
+  </head>
+  <body>
+    <form action="#" method="post">
+      <fieldset>
+        <dl>
+          <dt>
+            <label for="first-name">First Name</label>
+          </dt>
+          <dd>
+            <input type="text" name="first-name" id="first-name" required>
+          </dd>
+
+          <dt>
+            <label for="last-name">Last Name</label>
+          </dt>
+          <dd>
+            <input type="text" name="last-name" id="last-name" required>
+          </dd>    
+
+          <dt>
+            <label for="email">Email Address</label>
+          </dt>
+          <dd>
+            <input type="email" name="email" id="email"
+                   autocomplete="off" autocorrect="off"
+                   autocapitalize="none" required>
+          </dd>
+
+          <dt>
+            <label for="phone">Phone Number</label>
+          </dt>
+          <dd>
+            <input type="tel" name="phone" id="phone" required>
+          </dd>
+
+          <dt>
+            <label for="phone-type">Phone Type</label>
+          </dt>
+          <dd>
+            <select name="phone-type" id="phone-type-select" required>
+              <option value="home" default>Home</option>
+              <option value="work">Work</option>
+              <option value="mobile">Mobile</option>
+            </select>
+          </dd>
+
+          <dt>
+            <label for="message">Message</label>
+          </dt>
+          <dd>
+            <textarea name="message" id="message" rows="6" cols="80" placeholder="Dear Jesse, You're the bomb and..."></textarea>
+          </dd>
+        </dl>
+
+        <input type="submit" value="Send">
+
+      </fieldset>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTML Forms Practice, LS202.5.7</title>
+    <meta charset="utf-8">
+    <style>
+      label, select {
+        display: block;
+      }
+      h1, h2 {
+        margin: 0;
+        padding: 0;        
+      }
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <fieldset>
+        <header><h1>Filter by:</h1></header>
+        <label for="category">
+          Categories
+          <select name="category" id="category" size="5">
+            <option value="core">Core</option>
+            <option value="plugins-libraries">Plugins and Libraries</option>
+            <option value="conventions">Conventions</option>
+            <option value="reviews">Reviews</option>
+            <option value="opinion">Opinion</option>
+            <option value="people">People</option>
+          </select>
+        </label>
+        <label for="tag">
+          Tags
+          <select name="tag" id="tag" size="5" required>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">Javascript</option>
+            <option value="ruby">Ruby</option>
+            <option value="rails">Rails</option>
+            <option value="python">Python</option>
+            <option value="django">Django</option>
+          </select>
+        </label>
+        <input type="reset" value="Reset"><br>
+        <input type="submit" value="Filter">
+      </fieldset>
+    </form>
+  </body>
+</html>
