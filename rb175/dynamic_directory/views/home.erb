@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Files in the Public Directory</title>
+    <style>
+      * {
+        font: 24px sans-serif;
+      }
+    </style>
+
+</head>
+
+<body>
+  <div id="main">
+    <div class="header">
+      <h1>List of Files in the Public Directory</h1>
+    </div>
+
+    <div class="content">
+      <ul class="file-list">
+        <% sorted_list = @file_list.sort %>
+        <% sorted_list.reverse! if @reverse %>
+        <% file_num = 0 %>
+        <% sorted_list.each do |file_name| %>
+          <% next if [".", ".."].include?(file_name) %>
+          <% file_num += 1 %>
+
+          <li><a href="/file/?file_num=<%= file_num %>"><%= file_name %></a></li>
+
+        <% end %>
+      </ul>
+    </div>
+
+    <nav>
+      <a href="/?sort=az">Sort A-Z</a> || <a href="/?sort=za">Sort Z-A</a>
+    </nav>
+
+  </div>
+
+</body>
+</html>
