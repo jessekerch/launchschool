@@ -1,0 +1,13 @@
+<dl>
+  <dt><%= @name.capitalize %>'s Email Address: </dt>
+  <dd><%= @user_info[:email] %></dd>
+
+  <dt><%= @name.capitalize %>'s Interests: </dt>
+  <% @user_info[:interests].each do |interest| %>
+    <dd><%= interest %></dd>
+  <% end %>
+</dl>
+
+<nav>Other users:
+  <%= other_users(@name) %>
+</nav>
