@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Mixup Fixer</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="site.css" />
+    <script>
+      let header1 = document.getElementsByTagName('header')[0];
+      let header2 = document.getElementsByTagName('header')[1];
+      document.body.insertAdjacentElement("afterbegin", header2);
+
+      let h11 = document.getElementsByTagName('h1')[0];
+      header1.insertAdjacentElement("afterbegin", h11);
+
+      let h12 = document.getElementsByTagName('h1')[1];
+      header2.insertAdjacentElement("afterbegin", h12);
+
+      let article = document.querySelector('article');
+      let figure1 = document.getElementsByTagName('figure')[0];
+      let figure2 = document.getElementsByTagName('figure')[1];
+      article.insertAdjacentElement("beforeend", figure2);
+      article.insertAdjacentElement("beforeend", figure1);
+    </script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="#">My Site!</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="content">
+        <article>
+          <header>
+            <h1>Welcome to my site!</h1>
+            <h2>I hope you stay a while.</h2>
+          </header>
+          <p>
+            This is my personal slice of the Internet, where I post my ideas and
+            projects that I've completed or am currently working on. All are
+            patent pending.
+          </p>
+        </article>
+        <figure>
+          <img src="images/baby_mop.jpg" alt="The baby mop" />
+          <figcaption>
+            The chin stick &ndash; stay upright while sleeping!
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="images/chin_stick.jpg" alt="The chin stick" />
+          <figcaption>
+            The baby mop &ndash; great for wet and dry mopping!
+          </figcaption>
+        </figure>
+      </section>
+    </main>
+    
+    <footer>
+      <p>&copy; 2020 me. All projects are patent pending</p>
+    </footer>
+  </body>
+</html>

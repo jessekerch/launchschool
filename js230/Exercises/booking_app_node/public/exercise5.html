@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Exercise 5</title>
+    <style>
+      .grey {
+        background-color: gray;
+      }
+    </style>
+    <script type="module" src="/javascripts/exercise5.js"></script>
+  </head>
+  <body>
+    <h1>Schedules</h1>
+    <form action="/api/bookings" method="post" name="booking">
+      <div class="schedule">
+        <label for="schedule-select">Please select one schedule: </label>
+        <select name="schedule" id="schedule-select"></select>
+      </div>
+      <div class="schedule">
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" required />
+        <input type="submit" value="submit" />
+      </div>
+    </form>
+  </body>
+</html>

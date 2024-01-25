@@ -1,0 +1,38 @@
+<script src="https://dbdwvr6p7sskw.cloudfront.net/210/files/email_data_v2.js"></script>
+<script>
+  function getDates(data) {
+    let dates = emailData.match(/[0-9]{2}-[0-9]{2}-[0-9]{4}/g);
+    return dates.map((date) => {
+      date = date.split('-');
+      return new Date([date[2], date[0], date[1]]);
+    });
+  }
+
+  function getMinMaxDates(dates) {
+    let maxDate = dates[0];
+    let minDate = dates[0];
+
+    dates.forEach((date) => {
+      if (date > maxDate) maxDate = date;
+      if (date < minDate) minDate = date;
+    })
+
+    let options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+    minDate = minDate.toLocaleDateString('en-US', options);
+    maxDate = maxDate.toLocaleDateString('en-US', options);
+
+    return [minDate, maxDate];
+  }
+
+  function mailCount(emailData) {
+    let emails = emailData.split('##||##');
+    console.log(`Count of Email: ${emails.length}`);
+
+    let dates = getDates(emailData);
+  
+    [maxDate, minDate] = getMinMaxDates(dates);
+    console.log(`Date Range: ${minDate} - ${maxDate}`);
+  }
+
+  mailCount(emailData);
+</script>

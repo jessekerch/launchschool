@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Booking App</title>
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script type="module" src="/javascripts/booking_app.js"></script>
+  </head>
+  <body>
+    <form action="http://localhost:3000/api/staff_members" method="post" class="add-staff">
+      <div class="add-staff">
+        <label for="email">Email: </label>
+        <input type="text" name="email" id="email" required />
+      </div>
+      <div class="add-staff">
+        <label for="name">Name: </label>
+        <input type="text" name="name" id="name" required />
+      </div>
+      <div class="add-staff">
+        <input type="submit" value="Submit" />
+      </div>
+      </form>
+    </body>
+</html>
