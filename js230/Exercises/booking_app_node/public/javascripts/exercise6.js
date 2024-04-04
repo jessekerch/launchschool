@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', event => {
 
   async function getBookingDetails(date) {
     try {
-      let response = await fetch('/api/bookings/' + date);
+      let response = await fetch('/api/bookings/' + date, 'DELETE');
       let details = await response.json();
       return details;
     } catch (error) {
