@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/whitespace-reset.css" />
+  <link rel="stylesheet" href="stylesheets/sign_up.css" />
+  <script src="javascripts/sign_up.js" type="text/javascript"></script>
+  <title>Jesse's Sign Up Form</title>
+</head>
+<body>
+  <h1>Sign Up Form</h1>
+  <form action="#" method="post" novalidate>
+    <p class="form_error"></p>
+    <fieldset id="first_name">
+      <div>
+        <label for="first_name">First Name</label>
+        <input type="text" id="first_name" name="first_name" data-limit-input="[a-zA-Z']"
+        pattern="[a-zA-Z']{2,20}" data-msg="First name is required (2-20 characters long)" maxlength="20" required/>
+      </div>
+      <div>
+        <p class="error_message"></p>
+      </div>
+    </fieldset>
+    <fieldset id="last_name">
+      <div>
+        <label for="last_name">Last Name</label>
+        <input type="text" id="last_name" name="last_name" data-limit-input="[a-zA-Z']"
+        pattern="[a-zA-Z']{2,20}" data-msg="Last name is required (2-20 characters long)" maxlength="20" required/>
+      </div>
+      <div>
+        <p class="error_message"></p>
+      </div>
+    </fieldset>
+    <fieldset id="email">
+      <div>
+        <label for="email">Email address</label>
+        <input type="text" id="email" name="email" data-limit-input="[a-z0-9@.]"
+        pattern="[a-z0-9]+@[a-z0-9]+.[a-z0-9]+" data-msg="Email is required (2-20 characters long)" maxlength="20" required/>
+      </div>
+      <div>
+        <p class="error_message"></p>
+      </div>
+    </fieldset>
+    <fieldset id="password">
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" data-limit-input="[a-z0-9]"
+        pattern="[a-z0-9]{8,20}" data-msg="Password is required (8-20 characters long)" maxlength="20" required/>
+      </div>
+      <div>
+        <p class="error_message"></p>
+      </div>
+    </fieldset>
+    <fieldset id="phone">
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" data-limit-input="[0-9-]"
+        pattern="\d{3}(-)\d{3}(-)\d{4}" data-msg="Phone number is required (###-###-####)" maxlength="12" required/>
+      </div>
+      <div>
+        <p class="error_message"></p>
+      </div>
+    </fieldset>
+
+    <fieldset id="credit_card">
+      <div>
+        <label for="credit_card">Credit Card Number</label>
+        <span>
+          <input class="cc-input" type="text" id="credit_card" name="credit_card" data-limit-input="[0-9]"
+          pattern="\d{4}" data-msg="credit_card number is required (####-####-####)" maxlength="4" required/>
+          <input class="cc-input" type="text" id="credit_card" name="credit_card" data-limit-input="[0-9]"
+          pattern="\d{4}" data-msg="credit_card number is required (####-####-####)" maxlength="4" required/>
+          <input class="cc-input" type="text" id="credit_card" name="credit_card" data-limit-input="[0-9]"
+          pattern="\d{4}" data-msg="credit_card number is required (####-####-####)" maxlength="4" required/>
+          <input class="cc-input" type="text" id="credit_card" name="credit_card" data-limit-input="[0-9]"
+          pattern="\d{4}" data-msg="credit_card number is required (####-####-####)" maxlength="4" required/>
+        </span>
+      </div>
+      <div>
+        <p class="error_message"></p>
+      </div>
+    </fieldset>
+
+    <button type="submit" id="submit" value="Sign Up">Sign Up</button>
+  </form>
+  <div class="serialized">
+    <h3>Serialized Form</h3>
+    <p></p>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+* {
+  border: 0px black dotted;
+}
+
+h1 {
+  font-size: 2em;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 20px;
+}
+
+body {
+  background-color: rgb(242, 183, 141);
+  color: white;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+form {
+  color: black;
+  text-align: left;
+  width: 850px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: 10px 5px 5px rgba(58, 24, 2, 0.611);
+}
+
+fieldset {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin: 10px;
+}
+
+div.serialized {
+  background-color: lightgrey;
+  color: black;
+  width: 850px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.serialized > p {
+  margin: 20px;
+}
+
+input {
+  width: 350px;
+  height: 30px;
+  border: 1px black solid;
+  border-radius: 3px;
+  margin-top: 5px;
+  padding-left: 8px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+input.cc-input {
+  width: 50px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+#submit {
+  background-color: black;
+  border: 0px;
+  font-size: 1.1em;
+  color: white;
+  width: 120px;
+  height: 45px;
+  margin: 30px;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+p.form_error {
+  color: red;
+  font-size: 1.1em;
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+p.error_message {
+  color: red;
+  font-size: 1.1em;
+  margin-left: 20px;
+}
+

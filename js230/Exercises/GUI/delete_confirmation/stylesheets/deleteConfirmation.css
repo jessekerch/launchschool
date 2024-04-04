@@ -1,0 +1,97 @@
+* { 
+  border: 0px black dotted;
+  color: black;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: slateblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#overlay {
+  visibility: hidden;
+  z-index: 5;
+  background-color: black;
+  opacity: 0.6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#confirm {
+  visibility: hidden;
+  z-index: 10;
+  opacity: 1;
+  background-color: white;
+  border-radius: 5px;
+  width: 350px;
+  height: 170px;
+  position: absolute;
+  top: 130px;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#confirm p {
+  width: 200px;
+}
+
+article {
+  width: 500px;
+  height: 20px;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.delete {
+  height: 20px;
+  width: 20px;
+  font-size: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: 60px;
+  height: 25px;
+  border-radius: 3px;
+  border-style: outset;
+  font-weight: bold;
+}
+
+#yes {
+  background-color: red;
+  color: white;
+}
+
+#no {
+  background-color: green;
+  color: white;
+}

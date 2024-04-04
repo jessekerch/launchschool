@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/whitespace-reset.css" />
+  <link rel="stylesheet" href="stylesheets/languages.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.8/handlebars.min.js" integrity="sha512-E1dSFxg+wsfJ4HKjutk/WaCzK7S2wv1POn1RRPGh8ZK+ag9l244Vqxji3r6wgz9YBf6+vhQEYJZpSjqWFPg9gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="javascripts/languages.js" type="text/javascript"></script>
+  <title>Programming Languages</title>
+</head>
+<body>
+  <h1>Programming Languages</h1>
+  <div id="articles">
+  </div>
+  <script id="article_template" type="text/x-handlebars">
+    <article>
+       <h2>{{ name }}</h2>
+      <p>
+        {{ description }}
+      </p>
+      <button type="button" data-article-id="{{ id }}">+Show More</button>
+    </article>
+  </script>
+</body>
+</html>

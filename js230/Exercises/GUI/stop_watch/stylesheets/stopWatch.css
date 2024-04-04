@@ -1,0 +1,58 @@
+* {
+  border: 0px black dotted;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 5em;
+  font-style: normal;
+}
+
+div.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  margin-top: 70px;
+}
+
+div.numbers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+  border-radius: 3px;
+  width: 400px;
+  height: 130px;
+  text-align: center;
+}
+
+div.buttons {
+  width: 280px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;  
+}
+
+input {
+  background-color: rgb(54, 54, 54);
+  border-radius: 20px;
+  color: rgb(233, 233, 233);
+  font-size: 1.2em;
+  width: 95px;
+  height: 40px;
+  padding: 8px;
+  margin: 20px;
+}
+
+input.start {
+  background-color: green;
+  color: white;
+}

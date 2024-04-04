@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Accordion Toggle</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <style>
+      .highlight { background: #f0f0a0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Accordion Toggle</h1>
+    </header>
+
+    <form action="#" method="post">
+      <fieldset>
+        <input type="text" name="char" maxlength="1">
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+    <a href="#">Toggle</a>
+    <div id="accordion">
+      <p>This is a special paragraph; not just any paragraph / don't be confused or alarmed, although the punctuation may be dis[concerting] it is valid enough | for you. ~Just roll with it~</p>
+    </div>
+    <script>
+      $(() => {
+        let char;
+
+        $('form').on('submit', e => {
+          e.preventDefault();
+          char = $('input[type=text]').val();
+        });
+
+        $(document).off('keypress')
+        .on('keypress', e => {
+          if (e.key !== char) return;
+          $('a').trigger('click');
+        });
+        
+        $('a').on('click', e => {
+          e.preventDefault();
+          $('#accordion').slideToggle();
+        });
+      });
+    </script>
+  </body>
+</html>

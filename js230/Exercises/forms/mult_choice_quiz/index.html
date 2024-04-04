@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/whitespace-reset.css" />
+  <link rel="stylesheet" href="stylesheets/multiple_choice_quiz.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="javascripts/multiple_choice_quiz.js" type="text/javascript"></script>
+  <title>Jesse's Quiz: Multiple Choice</title>
+</head>
+<body>
+  <form>
+    <h2>Multiple Choice Quiz</h2>
+    <div></div>
+    <h1 class="score"></h1>
+    <button type="submit" id="submit_btn">Submit</button>
+    <button id="reset_btn">Reset</button>
+  </form>
+</body>
+<script id="question_template" type="text/x-handlebars-template">
+  <p class="question" id="question-{{id}}">Q{{id}}. {{{description}}}</p>
+  <ul>
+    {{#each options}}
+    {{> option opt=this id=../id}}
+    {{/each}}
+  </ul>
+  <p class="result" id="result_{{id}}"></p>
+</script>
+<script id="option_template" type="text/x-handlebars-template">
+<li><input id="ques{{id}}_idx{{@index}}" name="{{id}}" type="radio" value="{{opt}}"><label for="ques{{id}}_idx{{@index}}">{{opt}}</label></li>
+</script>
+</html>

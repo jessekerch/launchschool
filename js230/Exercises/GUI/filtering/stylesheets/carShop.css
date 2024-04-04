@@ -1,0 +1,66 @@
+* {
+  border: 0px black dotted;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+img {
+  width: 185px;
+}
+
+div.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  background-color: orange;
+  color: white;
+}
+
+select {
+  margin-left: 3px;
+  margin-right: 20px;
+}
+
+div.cars {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
+  width: 100%;
+}
+
+div.car-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+input {
+  background-color: orange;
+  border: 1px white solid;
+  color: white;
+  padding: 5px 15px 5px 15px;
+  border-radius: 3px;
+}
+
+select {
+  background-color: orange;
+  border: 1px white solid;
+  color: white;
+  padding: 2px 10px 2px 10px;
+  border-radius: 3px;
+}
+

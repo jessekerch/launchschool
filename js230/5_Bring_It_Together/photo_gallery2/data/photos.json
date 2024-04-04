@@ -1,0 +1,29 @@
+[
+  {
+    "src": "http://via.placeholder.com/1280x1024/eccdb8/3b0a5f",
+    "title": "Riverland Farm",
+    "caption": "Photo 1: The Riverland Farm is one map that many Stardew Valley players tend to overlook when they're choosing their map. The idea of the entire farm being so broken up by rivers may seem like it's not something that's appealing, but if you enjoy fishing, it can be helpful. Despite the broken-up land, there are still 1,578 tillable tiles on this map where crops can be planted and a generous amount of space for animals, equipment, and silos.",
+    "created_at": "2/13/24",
+    "likes": 13,
+    "favorites": 3,
+    "id": 1
+  },
+  {
+    "src": "http://via.placeholder.com/1280x1024/fffff1/0066cc",
+    "title": "Happy Dog",
+    "caption": "Photo 2: At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    "created_at": "4/1/15",
+    "likes": 2,
+    "favorites": 0,
+    "id": 2
+  },
+  {
+    "src": "http://via.placeholder.com/1280x1024/0066cc/ffffff",
+    "title": "Down by the Stream",
+    "caption": "Photo 3: At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+    "created_at": "4/1/15",
+    "likes": 1,
+    "favorites": 1,
+    "id": 3
+  }
+]

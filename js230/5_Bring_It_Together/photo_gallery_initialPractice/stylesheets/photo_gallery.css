@@ -1,0 +1,36 @@
+body {
+  background-color: #333333;
+}
+
+div.container {
+  background-color: #202020;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+div.main-frame {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+}
+
+div.main-frame img {
+  width: 500px;
+  margin: auto;
+}
+
+div.thumbnails {
+  width: 400px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 10px;
+  display: flex;
+}
+
+.thumbnails a, .thumbnails img {
+  width: 80px;
+  flex: 1 1 auto;
+  display: flex;
+}

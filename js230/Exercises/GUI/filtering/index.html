@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/whitespace-reset.css" />
+  <link rel="stylesheet" href="stylesheets/carShop.css" />
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script src="javascripts/carShop.js" type="text/javascript"></script>
+  <title>Jesse's Cars</title>
+</head>
+<body>
+  <div class="nav">
+    <h2>Jesse's Car Collection</h2>
+    <form id="filters">
+      <input type="submit" class="submit" value="Filter" />
+      <input type="button" class="reset" value="Reset" />
+    </form>
+  </div>
+  <div class="cars">
+
+  </div>
+  
+</body>
+
+<script id="car" type="text/x-handlebars">
+  <div class="car-wrapper">
+    <img src="{{ image }}" alt="{{ make }} {{ model }}">
+    <strong>{{ make }} {{ model }}</strong>
+    <p>Year: {{ year }}</p>
+    <p>Price: ${{ price }}</p>
+  </div> 
+</script>
+
+<script id="option" type="text/x-handlebars">
+  <option value="{{ this }}">{{ this }}</option>
+</script>
+
+<script id="input" type="text/x-handlebars">
+  <label for="{{ name }}">{{ text }}</label>
+  <select name="{{ name }}" id="{{ name }}">
+    {{#each options}}
+      {{>option}}
+    {{/each}}  
+  </select>  
+</script>  
+
+</html>

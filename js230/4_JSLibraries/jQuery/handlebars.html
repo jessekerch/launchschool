@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Handlebars Practice</title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <style>
+      .highlight { background: #f0f0a0; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="title">Handlebars Practice</h1>
+    </header>
+  </body>
+  <script id="tag" type="text/x-handlebars">
+    <strong>{{{this}}}</strong>
+  </script>
+  <script id="post" type="text/x-handlebars">
+    {{#each posts}}
+    <article>
+      <h1>{{title}}</h1>
+      <p><time>Posted on {{published}}</time></p>
+      {{{body}}}
+      <footer>
+        <p>
+        Tags:
+        {{#if tags}}
+        {{#each tags}}
+        {{> tag }}
+        {{/each}}
+        {{else }}
+        Not tagged
+        {{/if}}
+        </p>
+      </footer>
+    </article>
+    {{/each}}
+  </script>
+  <script>
+    let posts = [
+      {
+        title: 'Lorem ipsum dolor sit amet',
+        published: 'April 1, 1965',
+        body: 'Sed ut <em>perspiciatis</em> unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+        tags: ['notlatin', 'trendy', 'slick'],
+      },
+      {
+        title: 'Lorem ipsum dolor sit amet',
+        published: 'April 2, 1965',
+        body: 'Sed ut <em>perspiciatis</em> unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.',
+      },
+    ];
+
+    let postTemplate = Handlebars.compile($('#post').html());
+    Handlebars.registerPartial('tag', $('#tag').html());
+    $('body').append(postTemplate({ posts }));
+
+  </script>
+</html>

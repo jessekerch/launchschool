@@ -1,0 +1,63 @@
+body {
+  background-image: url('../images/red.jpeg');
+  background-color: black;
+  color: black;
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h1.score {
+  font-size: 1.8em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: white;
+  border-radius: 3px;
+  width: 600px;
+  margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+p.question {
+  padding: 5px;
+  margin-top: 10px;
+}
+
+p.result {
+  margin-top: 0px;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  margin: 5px;
+}
+
+li {
+  margin: 5px;
+}
+
+button {
+  width: 80px;
+  height: 30px;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 1.1em;
+  margin: 10px;
+}
+
+#submit_btn {
+  background-color: green;
+  color: white;
+}
