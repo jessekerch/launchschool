@@ -1,0 +1,23 @@
+[
+  {
+    "full_name": "Naveed Kafar",
+    "phone_number": "112-346-8252",
+    "email": "naveed@kafar.com",
+    "tags": "soccer,family,moms",
+    "id": 4
+  },
+  {
+    "full_name": "Sam Takagi",
+    "phone_number": "333-444-5555",
+    "email": "sam@takagi.com",
+    "tags": "soccer,family,moms",
+    "id": 5
+  },
+  {
+    "full_name": "Luffy D Monkey",
+    "phone_number": "333.444.4534",
+    "email": "luffy@roger.is",
+    "tags": "one piece,friend",
+    "id": 6
+  }
+]

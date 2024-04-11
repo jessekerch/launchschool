@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jesse's Contact Manager</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheets/whitespace-reset.css" />
+    <link rel="stylesheet" href="stylesheets/app.css" />
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://kit.fontawesome.com/53df1482bf.js" crossorigin="anonymous"></script>
+    <script type="module" src="/javascripts/app.js"></script>
+    <script type="module" src="/javascripts/model.js"></script>
+    <script type="module" src="/javascripts/view.js"></script>
+    <script type="module" src="/javascripts/controller.js"></script>
+  </head>
+<body>
+  <div class="title">
+    <h1>Contact Manager</h1>
+    <h3>Developed by jessekerch</h3>
+  </div>
+  <div class="main-wrapper">
+    <div class="nav">
+      <button data-action="save-contact" id="add-contact-btn">Add Contact</button>
+      <input id="contact-search" type="text" placeholder="Search contacts" />
+    </div>
+    <div class="main">
+    </div>
+    <div class="popup">
+      <form data-action="save">
+        <p class="form-error"></p>
+        <div class="popup-title">
+          <h1 class="popup-title">Add New Contact</h1>
+          <input type="number" id="id" name="id" style="display: none;"/>
+        </div>
+        <div class="popup-single">
+          <label class="contact-text" for="full_name">Full name: </label>
+          <input data-form-type="other" type="text" id="full_name"  name="full_name" pattern="[a-zA-Z'\. ]{2,35}" maxlength="35" required/>
+        </div>
+        <div class="popup-single">
+          <label class="contact-text" for="phone_number">Phone number: </label>
+          <input data-form-type="other" type="text" id="phone_number"  name="phone_number" pattern="[0-9\(\)\-\.]{10,14}" maxlength="14" required/>
+        </div>
+        <div class="popup-single">
+          <label class="contact-text" for="email">Email address: </label>
+          <input data-form-type="other" type="text" id="email" name="email" pattern="[a-z0-9]+@[a-z0-9]+.[a-z0-9]+" maxlength="30" required/>
+        </div>
+        <div class="popup-tags">
+          <div class="tag-checkboxes">
+            <legend>Tags:</legend>
+          </div>
+          <div class="popup-new-tags">
+            <label class="new-tag-label" for="tags">New tags: </label>
+            <input type="text" id="new-tags" name="new-tags" maxlength="25" data-form-type="other" />
+          </div>
+        </div>
+        <div class="popup-buttons">
+          <input class="submit" type="submit" value="Submit" />
+          <button type="button" value="cancel" name="cancel" data-action="cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <div class="delete-confirmation">
+      <div class="confirmation-sub">
+        <p>Are you sure you want to delete <em id="contact-name">Contact Name</em>?</p>
+      </div>
+      <div class="confirmation-sub">
+        <button type="button" value="delete" name="delete" data-action="delete-contact">Delete</button>
+        <button type="button" value="cancel" name="cancel" data-action="cancel">Cancel</button>
+    </div>
+  </div>
+</body>
+
+<script id="tag-template" type="text/x-handlebars-template">
+  <input type="checkbox" name="tags" id="{{.}}" value="{{.}}" /><label class="tag-label" for="{{.}}">{{.}}</label>
+</script>
+
+<script id="contact-card-template" type="text/x-handlebars-template">
+    <div class="contact-card">
+      <div class="contact-name-wrapper">
+        <h2>{{full_name}}</h2>
+      </div>
+      <div class="contact-info-wrapper">
+        <p><strong>Phone Number:</strong><br />
+        {{phone_number}}</p>
+          <p><strong>Email:</strong><br />
+        {{email}}</p>
+      </div>
+      <div id="contact-tag-wrapper">
+        <p><strong>Tags:</strong><br />
+        {{#each tags}}<span class="tag" data-action="filter" data-tag-name="{{.}}">{{.}}</span>{{/each}}</p>
+      </div>
+      <div class="contact-button-wrapper">
+        <button class="contact-control" data-contact-name="{{full_name}}" data-contact-id="{{id}}" data-action="update-contact"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+        <button class="contact-control" data-contact-name="{{full_name}}" data-contact-id="{{id}}" data-action="delete-confirmation"><i class="fa-solid fa-trash-can"></i> Delete</button>
+      </div>
+    </div>
+</script>
+
+</html>
