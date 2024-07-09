@@ -1,6 +1,6 @@
 // model.js gets data requests from controller
 // handles interaction with database, handles data logic validation, saving, deleting, etc
-// controller doesn't handle data, just sends it to controller
+// model doesn't handle data, just sends it to controller
 // doesn't decide what to do with success or failure, that's done by controller
 // send any data back to controller (gallery.js)
 
